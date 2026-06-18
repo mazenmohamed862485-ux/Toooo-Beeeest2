@@ -1,0 +1,74 @@
+name: tobest_monorepo
+repository: https://github.com/mazenmohamed862485-ux/Toooo-Beeeest2
+
+# إعداد Melos لإدارة الـ Monorepo
+packages:
+  - apps/**
+  - packages/**
+
+sdkPath: auto
+
+command:
+  bootstrap:
+    usePubspecOverrides: true
+
+scripts:
+  # توليد الأسرار من متغيرات البيئة (للتطوير المحلي)
+  gen:secrets:
+    run: bash scripts/generate_secrets.sh
+    description: "توليد secrets.dart من متغيرات البيئة (GAS_BASE_URL, GAS_SECRET_KEY, GEMINI_API_KEY)"
+
+  # تشغيل code generation في shared
+  gen:shared:
+    run: dart run build_runner build --delete-conflicting-outputs
+    packageFilters:
+      scope: "shared"
+    description: "توليد الكود في packages/shared"
+
+  # تشغيل code generation في كل التطبيقات
+  gen:all:
+    run: melos run gen:shared && melos run gen:apps
+    description: "توليد الكود في كل الـ Packages"
+
+  gen:apps:
+    run: dart run build_runner build --delete-conflicting-outputs
+    packageFilters:
+      scope: "tobest,tobest_management"
+    description: "توليد الكود في التطبيقين"
+
+  # فحص الكود
+  lint:
+    run: flutter analyze --no-fatal-infos
+    description: "تحليل الكود في كل الـ Packages"
+
+  # تشغيل الاختبارات
+  test:
+    run: flutter test
+    description: "تشغيل الاختبارات"
+
+  # تنظيف
+  clean:
+    run: flutter clean && dart run build_runner clean
+    description: "تنظيف الـ Build"
+
+  # تشغيل TO Best (debug)
+  run:tobest:
+    run: >
+      flutter run
+      --dart-define=GAS_BASE_URL=$GAS_BASE_URL
+      --dart-define=GAS_SECRET_KEY=$GAS_SECRET_KEY
+      --dart-define=GEMINI_API_KEY=$GEMINI_API_KEY
+    packageFilters:
+      scope: "tobest"
+    description: "تشغيل تطبيق TO Best بالأسرار من البيئة"
+
+  # تشغيل TO Best Management (debug)
+  run:management:
+    run: >
+      flutter run
+      --dart-define=GAS_BASE_URL=$GAS_BASE_URL
+      --dart-define=GAS_SECRET_KEY=$GAS_SECRET_KEY
+      --dart-define=GEMINI_API_KEY=$GEMINI_API_KEY
+    packageFilters:
+      scope: "tobest_management"
+    description: "تشغيل تطبيق Management بالأسرار من البيئة"

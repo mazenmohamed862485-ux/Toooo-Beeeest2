@@ -1,0 +1,50 @@
+# ⚠️ ملف الأسرار — لا ترفعه أبداً
+packages/shared/lib/config/secrets.dart
+
+# Flutter/Dart
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+build/
+*.g.dart
+*.freezed.dart
+*.mocks.dart
+
+# Android
+**/android/.gradle
+**/android/local.properties
+**/android/key.properties
+*.jks
+*.keystore
+
+# iOS
+**/ios/Pods/
+**/ios/.symlinks/
+**/ios/Flutter/App.framework
+**/ios/Flutter/Flutter.framework
+**/ios/Flutter/Flutter.podspec
+**/ios/Flutter/Generated.xcconfig
+**/ios/Flutter/ephemeral/
+**/ios/Runner/GeneratedPluginRegistrant.*
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Isar
+*.isar
+*.isar.lock
+
+# Melos
+.melos_tool/
+pubspec_overrides.yaml
+
+# CI/CD
+*.env
+.env.*

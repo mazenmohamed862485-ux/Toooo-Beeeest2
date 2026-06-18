@@ -1,0 +1,11 @@
+# TO Best Management — proguard-rules.pro
+-keep class io.flutter.** { *; }
+-keep class io.flutter.embedding.** { *; }
+-keep class io.flutter.plugins.** { *; }
+-keep class dev.isar.** { *; }
+-keep class androidx.work.** { *; }
+-keep class com.google.android.gms.** { *; }
+-dontwarn okhttp3.**
+-dontwarn okio.**
+-keepattributes SourceFile,LineNumberTable
+-renamesourcefileattribute SourceFile
