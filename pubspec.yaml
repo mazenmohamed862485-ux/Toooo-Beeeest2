@@ -1,0 +1,9 @@
+name: tobest_monorepo
+description: "TO Best Monorepo — workspace root (required by Melos)"
+publish_to: none
+
+environment:
+  sdk: ">=3.3.0 <4.0.0"
+
+# Melos is installed globally (dart pub global activate melos)
+# This pubspec.yaml exists so Melos can locate the workspace root
