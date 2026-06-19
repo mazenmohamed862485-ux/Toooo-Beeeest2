@@ -25,7 +25,7 @@ on:
           - debug
 
 env:
-  FLUTTER_VERSION: '3.24.5'
+  FLUTTER_VERSION: '3.44.2'
   JAVA_VERSION: '17'
 
 jobs:
@@ -52,10 +52,10 @@ jobs:
       - name: Bootstrap Monorepo
         run: melos bootstrap
 
-      - name: Generate secrets.dart (empty values for lint)
+      - name: Generate secrets.dart (empty for lint)
         run: |
           cat > packages/shared/lib/config/secrets.dart << 'EOF'
-          // GENERATED for CI lint — values are empty
+          // GENERATED for CI lint
           class AppSecrets {
             AppSecrets._();
             static const String gasBaseUrl = '';
@@ -141,7 +141,7 @@ jobs:
           dart run build_runner build --delete-conflicting-outputs
 
       - name: Setup Android Keystore
-        if: github.event.inputs.build_type != 'debug'
+        if: github.event.inputs.build_type == 'release'
         run: |
           if [ -n "${{ secrets.KEYSTORE_BASE64 }}" ]; then
             echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 --decode > apps/tobest/android/app/tobest.jks

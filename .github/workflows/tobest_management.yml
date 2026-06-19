@@ -18,7 +18,7 @@ on:
         options: [release, debug]
 
 env:
-  FLUTTER_VERSION: '3.24.5'
+  FLUTTER_VERSION: '3.44.2'
   JAVA_VERSION: '17'
 
 jobs:
@@ -75,6 +75,7 @@ jobs:
           flutter analyze --no-fatal-infos
 
       - name: Setup Keystore
+        if: github.event.inputs.build_type == 'release'
         run: |
           if [ -n "${{ secrets.MGMT_KEYSTORE_BASE64 }}" ]; then
             echo "${{ secrets.MGMT_KEYSTORE_BASE64 }}" | base64 --decode > apps/tobest_management/android/app/tobest_mgmt.jks
