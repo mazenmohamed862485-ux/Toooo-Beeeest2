@@ -39,9 +39,8 @@ dev_dependencies:
   flutter_lints: ^4.0.0
 
 dependency_overrides:
-  # record_linux 0.7.2 is incompatible with record_platform_interface >=1.5.0
-  # 1.5.0 added startStream + changed hasPermission signature
-  record_platform_interface: ">=1.1.0 <1.5.0"
+  # Pin to 1.1.0 exactly: startStream was added in 1.4.0, breaking record_linux 0.7.2
+  record_platform_interface: 1.1.0
   flutter_windowmanager:
     path: ../../packages/flutter_windowmanager_v2
 
