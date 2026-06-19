@@ -16,6 +16,7 @@ import '../../../auth/presentation/providers/auth_provider.dart';
 import 'program_definitions.dart';
 
 part 'workout_provider.g.dart';
+import 'package:connectivity_plus/connectivity_plus.dart';
 
 // ── برنامج اليوم ──────────────────────────────────────────────
 
@@ -506,7 +507,6 @@ SyncService syncService(SyncServiceRef ref) {
   );
 }
 
-import 'package:connectivity_plus/connectivity_plus.dart';
 
 @riverpod
 Connectivity connectivity(ConnectivityRef ref) => Connectivity();

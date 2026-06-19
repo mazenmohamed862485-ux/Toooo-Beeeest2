@@ -9,6 +9,9 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:shared/config/app_config.dart';
 import 'package:shared/design/tokens.dart';
 import '../../auth/presentation/providers/mgmt_auth_provider.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
+import 'package:shared/infrastructure/gas_client.dart';
+import '../providers/dashboard_provider.dart';
 
 class MgmtShellScreen extends ConsumerWidget {
   const MgmtShellScreen({super.key, required this.child});
@@ -179,9 +182,6 @@ class _NavItem {
 // dashboard_screen.dart — لوحة التحكم الرئيسية
 // ============================================================
 
-import 'package:riverpod_annotation/riverpod_annotation.dart';
-import 'package:shared/infrastructure/gas_client.dart';
-import '../providers/dashboard_provider.dart';
 
 /// لوحة التحكم الرئيسية
 class DashboardScreen extends ConsumerWidget {

@@ -8,6 +8,13 @@ import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:shared/config/app_config.dart';
 import 'package:shared/design/tokens.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:shared/domain/entities/user.dart';
+import 'package:intl/intl.dart';
+import '../providers/home_provider.dart';
+import '../../../auth/presentation/providers/auth_provider.dart';
+import '../../../workout/presentation/providers/workout_provider.dart';
+import '../../../settings/presentation/screens/settings_screen.dart';
 
 /// Shell الرئيسي مع Bottom Navigation
 class MainShellScreen extends StatelessWidget {
@@ -82,13 +89,6 @@ class MainShellScreen extends StatelessWidget {
 // home_screen.dart — شاشة الرئيسية
 // ============================================================
 
-import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:shared/domain/entities/user.dart';
-import 'package:intl/intl.dart';
-import '../providers/home_provider.dart';
-import '../../../auth/presentation/providers/auth_provider.dart';
-import '../../../workout/presentation/providers/workout_provider.dart';
-import '../../../settings/presentation/screens/settings_screen.dart';
 
 /// شاشة الرئيسية
 class HomeScreen extends HookConsumerWidget {

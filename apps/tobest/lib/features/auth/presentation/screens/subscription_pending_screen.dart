@@ -2,6 +2,7 @@
 // subscription_pending_screen.dart
 // ============================================================
 
+import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -160,7 +161,6 @@ class _SubscriptionPendingScreenState
   }
 
   Future<String> _toBase64(List<int> bytes) async {
-    import 'dart:convert';
     return base64Encode(bytes);
   }
 }

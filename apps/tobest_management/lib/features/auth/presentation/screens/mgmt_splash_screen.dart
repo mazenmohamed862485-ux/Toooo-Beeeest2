@@ -9,6 +9,7 @@ import 'package:shared/design/tokens.dart';
 import 'package:shared/design/widgets/breathing_animation.dart';
 import 'package:shared/config/app_config.dart';
 import '../providers/mgmt_auth_provider.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 
 class MgmtSplashScreen extends ConsumerStatefulWidget {
   const MgmtSplashScreen({super.key});
@@ -88,7 +89,6 @@ class _MgmtSplashScreenState extends ConsumerState<MgmtSplashScreen> {
 // mgmt_login_screen.dart
 // ============================================================
 
-import 'package:flutter_hooks/flutter_hooks.dart';
 
 class MgmtLoginScreen extends HookConsumerWidget {
   const MgmtLoginScreen({super.key});

@@ -15,6 +15,9 @@ import 'package:shared/data/models/user_model.dart';
 import 'package:uuid/uuid.dart';
 
 part 'auth_provider.g.dart';
+import 'package:shared/design/themes.dart';
+import 'package:flutter/material.dart';
+import 'package:shared/design/tokens.dart';
 
 // ── Providers للاعتماديات ──────────────────────────────────
 
@@ -371,8 +374,6 @@ class GoogleSignInResult {
 // ── Settings Provider ─────────────────────────────────────────
 // (في ملف منفصل لكن مُعرَّف هنا للاستخدام في router.dart)
 
-import 'package:shared/design/themes.dart';
-import 'package:flutter/material.dart';
 
 /// إعدادات التطبيق المحلية
 class AppSettings {
@@ -412,4 +413,3 @@ class AppSettings {
   }
 }
 
-import 'package:shared/design/tokens.dart';

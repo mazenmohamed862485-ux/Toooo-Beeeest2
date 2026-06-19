@@ -6,6 +6,8 @@
 import 'package:flutter/material.dart';
 import 'package:shared/design/tokens.dart';
 import 'package:shared/design/widgets/breathing_animation.dart';
+import 'package:shared/utils/evaluator.dart';
+import '../providers/workout_provider.dart';
 
 /// Rest Timer يعمل كـ BottomSheet مع Breathing Animation
 class RestTimerOverlay extends StatelessWidget {
@@ -64,8 +66,6 @@ class RestTimerOverlay extends StatelessWidget {
 // ملخص الجلسة عند الإنهاء
 // ============================================================
 
-import 'package:shared/utils/evaluator.dart';
-import '../providers/workout_provider.dart';
 
 /// Bottom Sheet ملخص الجلسة عند الإنهاء
 class WorkoutCompletionSheet extends StatelessWidget {
