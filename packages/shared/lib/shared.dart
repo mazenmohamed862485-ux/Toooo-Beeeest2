@@ -1,7 +1,4 @@
 /// TO Best Shared Package
-///
-/// الحزمة المشتركة بين TO Best و TO Best Management
-/// تحتوي على: domain, data, infrastructure, design, utils
 library shared;
 
 // ── Config ────────────────────────────────────────────────────
@@ -18,6 +15,11 @@ export 'domain/entities/health_data.dart';
 // ── Domain — Repositories ─────────────────────────────────────
 export 'domain/repositories/auth_repository.dart';
 export 'domain/repositories/workout_repository.dart';
+export 'domain/repositories/nutrition_repository.dart';
+export 'domain/repositories/chat_repository.dart';
+export 'domain/repositories/health_repository.dart';
+export 'domain/repositories/subscription_repository.dart';
+export 'domain/repositories/video_repository.dart';
 
 // ── Data — Models ────────────────────────────────────────────
 export 'data/models/user_model.dart';

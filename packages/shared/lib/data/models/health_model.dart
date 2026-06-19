@@ -1,7 +1,4 @@
-// ============================================================
 // TO Best — data/models/health_model.dart
-// Isar Schema لبيانات الصحة
-// ============================================================
 
 import 'package:isar/isar.dart';
 import '../../domain/entities/health_data.dart';
@@ -26,7 +23,10 @@ class HealthDataIsarModel {
 
   Id id = Isar.autoIncrement;
 
-  @Index()
+  @Index(
+    composite: [CompositeIndex('dateMs')],
+    unique: true,
+  )
   final String userId;
 
   @Index()

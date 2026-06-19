@@ -1,11 +1,7 @@
-// ============================================================
 // TO Best — data/models/subscription_model.dart
-// Isar Schema لطلبات الاشتراك
-// ============================================================
 
 import 'package:isar/isar.dart';
-import '../../domain/entities/health_data.dart'
-    show SubscriptionRequest, SubscriptionPlan;
+import '../../domain/entities/health_data.dart' show SubscriptionRequest, SubscriptionPlan;
 
 part 'subscription_model.g.dart';
 
@@ -75,12 +71,10 @@ class SubscriptionRequestIsarModel {
     );
   }
 
-  factory SubscriptionRequestIsarModel.fromJson(
-      Map<String, dynamic> json) {
+  factory SubscriptionRequestIsarModel.fromJson(Map<String, dynamic> json) {
     DateTime? parseDate(dynamic val) {
       if (val == null || val.toString().isEmpty) return null;
       try {
-        if (val is int) return DateTime.fromMillisecondsSinceEpoch(val);
         return DateTime.parse(val.toString());
       } catch (_) {
         return null;
