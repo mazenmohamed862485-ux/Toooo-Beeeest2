@@ -113,5 +113,23 @@
       }
       return null;
     }
-  }
   
+    /// ضبط القيم الغذائية بناءً على الكمية المحددة
+    static FoodItem adjustByAmount(FoodItem food, double amount) {
+      final ratio = amount / (food.amount > 0 ? food.amount : 100);
+      return FoodItem(
+        id: food.id,
+        name: food.name,
+        nameEn: food.nameEn,
+        category: food.category,
+        aliases: food.aliases,
+        cost: food.cost,
+        amount: amount,
+        calories: food.calories * ratio,
+        protein: food.protein * ratio,
+        carbs: food.carbs * ratio,
+        fat: food.fat * ratio,
+        fiber: food.fiber * ratio,
+      );
+    }
+  }

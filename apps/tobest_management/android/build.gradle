@@ -20,4 +20,15 @@
   tasks.register("clean", Delete) {
       delete rootProject.buildDir
   }
-  
+
+    // Patch: set namespace for old plugins that don't declare it (required by AGP 8.6+)
+    subprojects {
+        afterEvaluate { sub ->
+            if (sub.plugins.hasPlugin("com.android.library")) {
+                if (sub.android.namespace == null) {
+                    sub.android.namespace = sub.group
+                }
+            }
+        }
+    }
+    
