@@ -1,0 +1,40 @@
+group 'io.adaptant.labs.flutter_windowmanager'
+  version '1.0'
+
+  buildscript {
+      repositories {
+          google()
+          mavenCentral()
+      }
+      dependencies {
+          classpath 'com.android.tools.build:gradle:8.9.1'
+      }
+  }
+
+  rootProject.allprojects {
+      repositories {
+          google()
+          mavenCentral()
+      }
+  }
+
+  apply plugin: 'com.android.library'
+
+  android {
+      namespace "io.adaptant.labs.flutter_windowmanager"
+      compileSdk 35
+
+      defaultConfig {
+          minSdk 16
+      }
+
+      compileOptions {
+          sourceCompatibility JavaVersion.VERSION_17
+          targetCompatibility JavaVersion.VERSION_17
+      }
+  }
+
+  dependencies {
+      implementation 'androidx.annotation:annotation:1.7.1'
+  }
+  
