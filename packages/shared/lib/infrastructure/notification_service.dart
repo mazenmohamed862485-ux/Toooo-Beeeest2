@@ -51,33 +51,39 @@ class NotificationService {
   Future<void> _createChannels() async {
     final androidPlugin = _plugin.resolvePlatformSpecificImplementation<AndroidFlutterLocalNotificationsPlugin>();
 
-    await androidPlugin?.createNotificationChannels([
-      const AndroidNotificationChannel(
-        _chatChannelId,
-        'رسائل الشات',
-        description: 'إشعارات رسائل الشات الجديدة',
-        importance: Importance.high,
-        enableVibration: true,
-      ),
-      const AndroidNotificationChannel(
-        _subscriptionChannelId,
-        'الاشتراكات',
-        description: 'موافقة أو رفض طلبات الاشتراك',
-        importance: Importance.high,
-      ),
-      const AndroidNotificationChannel(
-        _systemChannelId,
-        'النظام',
-        description: 'إشعارات النظام والأجهزة',
-        importance: Importance.high,
-      ),
-      const AndroidNotificationChannel(
-        _motivationChannelId,
-        'التحفيز',
-        description: 'Streak وإنجازات وتذكيرات',
-        importance: Importance.defaultImportance,
-      ),
-    ]);
+    await androidPlugin?.createNotificationChannel(
+        const AndroidNotificationChannel(
+          _chatChannelId,
+          'رسائل الشات',
+          description: 'إشعارات رسائل الشات الجديدة',
+          importance: Importance.high,
+          enableVibration: true,
+        ),
+      );
+      await androidPlugin?.createNotificationChannel(
+        const AndroidNotificationChannel(
+          _subscriptionChannelId,
+          'الاشتراكات',
+          description: 'موافقة أو رفض طلبات الاشتراك',
+          importance: Importance.high,
+        ),
+      );
+      await androidPlugin?.createNotificationChannel(
+        const AndroidNotificationChannel(
+          _systemChannelId,
+          'النظام',
+          description: 'إشعارات النظام والأجهزة',
+          importance: Importance.high,
+        ),
+      );
+      await androidPlugin?.createNotificationChannel(
+        const AndroidNotificationChannel(
+          _motivationChannelId,
+          'التحفيز',
+          description: 'Streak وإنجازات وتذكيرات',
+          importance: Importance.defaultImportance,
+        ),
+      );
   }
 
   // ── إرسال الإشعارات ──────────────────────────────────────
