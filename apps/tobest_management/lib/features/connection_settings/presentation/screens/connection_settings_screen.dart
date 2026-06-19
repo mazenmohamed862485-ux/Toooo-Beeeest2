@@ -8,6 +8,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:shared/design/tokens.dart';
 import 'package:shared/infrastructure/gas_client.dart';
+import '../../../auth/presentation/providers/mgmt_auth_provider.dart';
 
 class ConnectionSettingsScreen extends HookConsumerWidget {
   const ConnectionSettingsScreen({super.key});
@@ -47,7 +48,7 @@ class ConnectionSettingsScreen extends HookConsumerWidget {
       isSaving.value = true;
 
       try {
-        final gasClient = ref.read(gasClientProvider);
+        final gasClient = ref.read(mgmtGasClientProvider);
         await gasClient.saveConnectionSettings(
           gasUrl: gasUrlCtrl.text.trim(),
           secretKey: secretCtrl.text.trim(),

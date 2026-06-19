@@ -12,7 +12,7 @@ import 'package:shared/config/app_config.dart';
 import 'package:shared/domain/entities/user.dart';
 import 'package:shared/data/models/user_model.dart';
 import 'package:intl/intl.dart';
-import '../../auth/presentation/providers/mgmt_auth_provider.dart';
+import '../../../auth/presentation/providers/mgmt_auth_provider.dart';
 
 part 'user_profile_screen.g.dart';
 

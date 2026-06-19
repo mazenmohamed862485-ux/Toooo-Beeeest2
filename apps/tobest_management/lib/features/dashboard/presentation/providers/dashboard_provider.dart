@@ -4,7 +4,7 @@
 
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:shared/infrastructure/gas_client.dart';
-import '../../auth/presentation/providers/mgmt_auth_provider.dart';
+import '../../../auth/presentation/providers/mgmt_auth_provider.dart';
 
 part 'dashboard_provider.g.dart';
 

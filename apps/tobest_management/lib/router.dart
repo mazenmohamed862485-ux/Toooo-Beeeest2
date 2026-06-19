@@ -21,7 +21,7 @@ import 'features/referral_stats/presentation/screens/referral_stats_screen.dart'
 import 'features/auth/presentation/providers/mgmt_auth_provider.dart';
 import 'features/dashboard/presentation/screens/mgmt_shell_screen.dart';
 
-GoRouter managementRouter(Ref ref) {
+GoRouter managementRouter(WidgetRef ref) {
   return GoRouter(
     initialLocation: '/splash',
     debugLogDiagnostics: false,

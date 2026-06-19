@@ -6,7 +6,7 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:shared/infrastructure/gas_client.dart';
 import 'package:shared/domain/entities/health_data.dart';
 import 'package:shared/infrastructure/notification_service.dart';
-import '../../auth/presentation/providers/mgmt_auth_provider.dart';
+import '../../../auth/presentation/providers/mgmt_auth_provider.dart';
 
 part 'subscription_requests_provider.g.dart';
 

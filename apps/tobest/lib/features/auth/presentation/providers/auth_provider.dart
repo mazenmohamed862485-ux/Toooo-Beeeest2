@@ -14,10 +14,10 @@ import 'package:shared/infrastructure/isar_service.dart';
 import 'package:shared/data/models/user_model.dart';
 import 'package:uuid/uuid.dart';
 
-part 'auth_provider.g.dart';
 import 'package:shared/design/themes.dart';
 import 'package:flutter/material.dart';
 import 'package:shared/design/tokens.dart';
+part 'auth_provider.g.dart';
 
 // ── Providers للاعتماديات ──────────────────────────────────
 

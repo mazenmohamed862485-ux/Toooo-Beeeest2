@@ -8,7 +8,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:shared/design/tokens.dart';
 import 'package:shared/infrastructure/gas_client.dart';
-import '../../auth/presentation/providers/mgmt_auth_provider.dart';
+import '../../../auth/presentation/providers/mgmt_auth_provider.dart';
 
 part 'subscription_plans_screen.g.dart';
 

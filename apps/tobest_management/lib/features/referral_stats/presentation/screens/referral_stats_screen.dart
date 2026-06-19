@@ -9,7 +9,7 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:shared/design/tokens.dart';
 import 'package:shared/infrastructure/gas_client.dart';
 import 'package:intl/intl.dart';
-import '../../auth/presentation/providers/mgmt_auth_provider.dart';
+import '../../../auth/presentation/providers/mgmt_auth_provider.dart';
 
 part 'referral_stats_screen.g.dart';
 

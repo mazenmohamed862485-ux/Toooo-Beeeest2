@@ -15,8 +15,8 @@ import 'package:uuid/uuid.dart';
 import '../../../auth/presentation/providers/auth_provider.dart';
 import 'program_definitions.dart';
 
-part 'workout_provider.g.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
+part 'workout_provider.g.dart';
 
 // ── برنامج اليوم ──────────────────────────────────────────────
 
