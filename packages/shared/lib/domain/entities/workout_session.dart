@@ -69,6 +69,48 @@ class WorkoutSession extends Equatable {
   }
 }
 
+    /// تقييم أداء تمرين مقارنةً بالجلسات السابقة
+    EvalResult evaluateExercise({
+      required String exerciseName,
+      required List<WorkoutSession> history,
+    }) {
+      final currentLog = exercises.firstWhere(
+        (e) => e.exerciseName == exerciseName,
+        orElse: () => const ExerciseLog(exerciseName: '', sets: []),
+      );
+      if (currentLog.sets.isEmpty) {
+        return const EvalResult(code: 'beg', arabicLabel: 'مبتدئ', englishLabel: 'Beginner', icon: 'person_outline');
+      }
+      if (history.isEmpty) {
+        return const EvalResult(code: 'gd', arabicLabel: 'جيد', englishLabel: 'Good', icon: 'thumb_up_outlined');
+      }
+      double currentBest = 0;
+      for (final s in currentLog.sets) {
+        final rm = s.weight * (1 + s.reps / 30.0);
+        if (rm > currentBest) currentBest = rm;
+      }
+      double historyBest = 0;
+      for (final session in history) {
+        final log = session.exercises.firstWhere(
+          (e) => e.exerciseName == exerciseName,
+          orElse: () => const ExerciseLog(exerciseName: '', sets: []),
+        );
+        for (final s in log.sets) {
+          final rm = s.weight * (1 + s.reps / 30.0);
+          if (rm > historyBest) historyBest = rm;
+        }
+      }
+      if (historyBest == 0) {
+        return const EvalResult(code: 'gd', arabicLabel: 'جيد', englishLabel: 'Good', icon: 'thumb_up_outlined');
+      }
+      final ratio = currentBest / historyBest;
+      if (ratio >= 1.05) return const EvalResult(code: 's1', arabicLabel: 'قوي جداً', englishLabel: 'Very Strong', icon: 'local_fire_department');
+      if (ratio >= 1.02) return const EvalResult(code: 's2', arabicLabel: 'قوي', englishLabel: 'Strong', icon: 'fitness_center');
+      if (ratio >= 0.98) return const EvalResult(code: 'st', arabicLabel: 'ثابت', englishLabel: 'Stable', icon: 'horizontal_rule');
+      if (ratio >= 0.95) return const EvalResult(code: 'ws', arabicLabel: 'ضعيف', englishLabel: 'Weak', icon: 'trending_down');
+      return const EvalResult(code: 'dn', arabicLabel: 'تراجع', englishLabel: 'Declined', icon: 'arrow_downward');
+    }
+  
 /// سجل تمرين واحد داخل الجلسة
 class ExerciseLog extends Equatable {
   const ExerciseLog({
