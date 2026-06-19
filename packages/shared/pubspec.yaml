@@ -51,7 +51,7 @@ dependencies:
   pedometer: ^4.0.2
 
   # ── Background ───────────────────────────────────────────
-  workmanager: ^0.5.2
+  workmanager: ^0.6.0
 
   # ── Connectivity ─────────────────────────────────────────
   connectivity_plus: ^6.0.3
