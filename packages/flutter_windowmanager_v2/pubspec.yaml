@@ -1,0 +1,20 @@
+name: flutter_windowmanager
+  description: Patched flutter_windowmanager using Flutter v2 embedding (no Registrar).
+  version: 0.2.1
+  publish_to: none
+
+  environment:
+    sdk: ">=3.3.0 <4.0.0"
+    flutter: ">=3.0.0"
+
+  dependencies:
+    flutter:
+      sdk: flutter
+
+  flutter:
+    plugin:
+      platforms:
+        android:
+          package: io.adaptant.labs.flutter_windowmanager
+          pluginClass: FlutterWindowManagerPlugin
+  
