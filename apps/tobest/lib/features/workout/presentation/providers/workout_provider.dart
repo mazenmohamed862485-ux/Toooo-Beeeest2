@@ -7,6 +7,7 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:shared/domain/entities/workout_session.dart';
 import 'package:shared/domain/entities/user.dart';
 import 'package:shared/infrastructure/gas_client.dart';
+import 'package:isar/isar.dart';
 import 'package:shared/infrastructure/isar_service.dart';
 import 'package:shared/infrastructure/sync_service.dart';
 import 'package:shared/data/models/workout_model.dart';

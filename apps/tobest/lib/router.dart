@@ -15,10 +15,7 @@ import 'features/auth/presentation/screens/register_screen.dart';
 import 'features/auth/presentation/screens/forgot_password_screen.dart';
 import 'features/auth/presentation/screens/otp_screen.dart';
 import 'features/auth/presentation/screens/subscription_pending_screen.dart';
-import 'features/auth/presentation/screens/subscription_rejected_screen.dart';
-import 'features/auth/presentation/screens/subscription_expired_screen.dart';
 import 'features/auth/presentation/screens/google_signin_completion_screen.dart';
-import 'features/auth/presentation/screens/guest_screen.dart';
 import 'features/home/presentation/screens/home_screen.dart';
 import 'features/workout/presentation/screens/workout_screen.dart';
 import 'features/nutrition/presentation/screens/nutrition_screen.dart';
@@ -194,7 +191,7 @@ GoRouter appRouter(WidgetRef ref) {
 }
 
 /// منطق الـ Redirect الرئيسي
-String? _redirect(Ref ref, GoRouterState state) {
+String? _redirect(WidgetRef ref, GoRouterState state) {
   final authState = ref.read(authStateProvider);
   final path = state.matchedLocation;
 

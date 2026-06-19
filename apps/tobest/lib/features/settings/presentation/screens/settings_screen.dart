@@ -8,6 +8,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shared/design/tokens.dart';
+import 'package:shared/utils/validators.dart';
 import 'package:shared/design/themes.dart';
 import 'package:shared/config/app_config.dart';
 import 'package:shared/infrastructure/gas_client.dart';
@@ -24,7 +25,7 @@ class SettingsScreen extends ConsumerWidget {
     final isDark = Theme.of(context).brightness == Brightness.dark;
 
     return Scaffold(
-      appBar: const AppBar(title: Text('الإعدادات')),
+      appBar: AppBar(title: const Text('الإعدادات')),
       body: ListView(
         padding: const EdgeInsets.all(AppSpacing.lg),
         children: [
@@ -514,7 +515,7 @@ class ChangePasswordScreen extends HookConsumerWidget {
     }
 
     return Scaffold(
-      appBar: const AppBar(title: Text('تغيير كلمة المرور')),
+      appBar: AppBar(title: const Text('تغيير كلمة المرور')),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(AppSpacing.xl),

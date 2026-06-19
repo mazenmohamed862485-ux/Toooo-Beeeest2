@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:shared/design/themes.dart';
 import 'package:shared/design/tokens.dart';
+import 'package:isar/isar.dart';
 import 'package:shared/infrastructure/isar_service.dart';
 import 'package:shared/infrastructure/background_service.dart';
 import '../../../auth/presentation/providers/auth_provider.dart';
