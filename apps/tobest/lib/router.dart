@@ -16,14 +16,14 @@ import 'features/auth/presentation/screens/forgot_password_screen.dart';
 import 'features/auth/presentation/screens/otp_screen.dart';
 import 'features/auth/presentation/screens/subscription_pending_screen.dart';
 import 'features/auth/presentation/screens/google_signin_completion_screen.dart';
-import 'features/home/presentation/screens/home_screen.dart';
+import 'features/home/presentation/screens/home_screen.dart' hide HomeScreen;
 import 'features/workout/presentation/screens/workout_screen.dart';
 import 'features/nutrition/presentation/screens/nutrition_screen.dart';
 import 'features/progress/presentation/screens/progress_screen.dart';
 import 'features/chat/presentation/screens/chat_screen.dart';
 import 'features/chat/presentation/screens/conversation_screen.dart';
 import 'features/ai_coach/presentation/screens/ai_coach_screen.dart';
-import 'features/settings/presentation/screens/settings_screen.dart';
+import 'features/settings/presentation/screens/settings_screen.dart' hide ChangePasswordScreen;
 import 'features/settings/presentation/screens/change_password_screen.dart';
 import 'features/home/presentation/screens/main_shell_screen.dart';
 
