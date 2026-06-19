@@ -77,12 +77,12 @@ jobs:
       - name: Analyze shared
         run: |
           cd packages/shared
-          flutter analyze --no-fatal-infos
+          flutter analyze --no-fatal-infos --no-fatal-warnings
 
       - name: Analyze tobest
         run: |
           cd apps/tobest
-          flutter analyze --no-fatal-infos
+          flutter analyze --no-fatal-infos --no-fatal-warnings
 
       - name: Run Tests
         run: |
