@@ -88,7 +88,7 @@ GoRouter managementRouter(WidgetRef ref) {
   );
 }
 
-String? _redirect(Ref ref, GoRouterState state) {
+String? _redirect(WidgetRef ref, GoRouterState state) {
   final authState = ref.read(mgmtAuthStateProvider);
   final path = state.matchedLocation;
 
@@ -134,5 +134,5 @@ class MgmtRouterNotifier extends ChangeNotifier {
   MgmtRouterNotifier(this._ref) {
     _ref.listen(mgmtAuthStateProvider, (_, __) => notifyListeners());
   }
-  final Ref _ref;
+  final WidgetRef _ref;
 }

@@ -284,8 +284,8 @@ class AppThemes {
     );
   }
 
-  static CardTheme _buildCardTheme(Color surface) {
-    return CardTheme(
+  static CardThemeData _buildCardTheme(Color surface) {
+    return CardThemeData(
       color: surface,
       elevation: 0,
       shape: RoundedRectangleBorder(

@@ -49,9 +49,9 @@ class NotificationService {
   }
 
   Future<void> _createChannels() async {
-    const androidPlugin = AndroidFlutterLocalNotificationsPlugin();
+    final androidPlugin = _plugin.resolvePlatformSpecificImplementation<AndroidFlutterLocalNotificationsPlugin>();
 
-    await androidPlugin.createNotificationChannels([
+    await androidPlugin?.createNotificationChannels([
       const AndroidNotificationChannel(
         _chatChannelId,
         'رسائل الشات',

@@ -7,7 +7,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shared/config/app_config.dart';
 import 'package:shared/design/tokens.dart';
-import '../../auth/presentation/providers/mgmt_auth_provider.dart';
+import '../../../auth/presentation/providers/mgmt_auth_provider.dart';
 import '../providers/dashboard_provider.dart';
 
 export '../providers/dashboard_provider.dart'

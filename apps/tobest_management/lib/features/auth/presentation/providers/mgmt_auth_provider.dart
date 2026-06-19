@@ -32,8 +32,7 @@ class MgmtAuthState extends _$MgmtAuthState {
   Future<UserEntity?> build() async {
     final isar = ref.read(mgmtIsarServiceProvider);
     final db = await isar.db;
-    final all = await db.userIsarModels.where().findAll();
-    final model = all.isEmpty ? null : all.first;
+    final model = await db.userIsarModels.where().anyId().findFirst();
     if (model == null) return null;
 
     // فحص أن الدور إداري
