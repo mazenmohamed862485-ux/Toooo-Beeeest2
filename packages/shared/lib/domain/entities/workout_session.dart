@@ -67,8 +67,6 @@ class WorkoutSession extends Equatable {
       notes: notes ?? this.notes,
     );
   }
-}
-
     /// تقييم أداء تمرين مقارنةً بالجلسات السابقة
     EvalResult evaluateExercise({
       required String exerciseName,
@@ -110,7 +108,7 @@ class WorkoutSession extends Equatable {
       if (ratio >= 0.95) return const EvalResult(code: 'ws', arabicLabel: 'ضعيف', englishLabel: 'Weak', icon: 'trending_down');
       return const EvalResult(code: 'dn', arabicLabel: 'تراجع', englishLabel: 'Declined', icon: 'arrow_downward');
     }
-  
+  }
 /// سجل تمرين واحد داخل الجلسة
 class ExerciseLog extends Equatable {
   const ExerciseLog({
