@@ -2,6 +2,7 @@
 // TO Best Management — features/auth/providers/mgmt_auth_provider.dart
 // ============================================================
 
+import 'package:isar/isar.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:shared/config/app_config.dart';
 import 'package:shared/domain/entities/user.dart';
@@ -32,8 +33,7 @@ class MgmtAuthState extends _$MgmtAuthState {
   Future<UserEntity?> build() async {
     final isar = ref.read(mgmtIsarServiceProvider);
     final db = await isar.db;
-    final models = await db.userIsarModels.where().findAll();
-    final model = models.isEmpty ? null : models.first;
+    final model = await db.userIsarModels.where().findFirst();
     if (model == null) return null;
 
     // فحص أن الدور إداري
