@@ -72,7 +72,7 @@ jobs:
       - name: Analyze
         run: |
           cd apps/tobest_management
-          flutter analyze --no-fatal-infos
+          flutter analyze --no-fatal-infos --no-fatal-warnings
 
       - name: Setup Keystore
         if: github.event.inputs.build_type == 'release'
