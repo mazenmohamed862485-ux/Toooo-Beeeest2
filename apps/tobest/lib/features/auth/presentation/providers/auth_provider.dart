@@ -17,6 +17,7 @@ import 'package:uuid/uuid.dart';
 import 'package:shared/design/themes.dart';
 import 'package:flutter/material.dart';
 import 'package:shared/design/tokens.dart';
+import 'package:isar/isar.dart';
 part 'auth_provider.g.dart';
 
 // ── Providers للاعتماديات ──────────────────────────────────

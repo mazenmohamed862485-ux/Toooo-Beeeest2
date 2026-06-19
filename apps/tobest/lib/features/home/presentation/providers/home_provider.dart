@@ -8,6 +8,8 @@ import 'package:shared/data/models/health_model.dart';
 import 'package:shared/data/models/food_model.dart';
 import '../../../auth/presentation/providers/auth_provider.dart';
 
+import 'package:isar/isar.dart';
+import 'package:shared/data/models/workout_model.dart';
 part 'home_provider.g.dart';
 
 /// بيانات الشاشة الرئيسية

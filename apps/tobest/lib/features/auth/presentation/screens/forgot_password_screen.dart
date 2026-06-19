@@ -11,6 +11,8 @@ import 'package:shared/design/tokens.dart';
 import 'package:shared/utils/validators.dart';
 import 'package:shared/infrastructure/gas_client.dart';
 import '../providers/auth_provider.dart';
+import 'package:shared/domain/entities/user.dart';
+import 'package:shared/design/widgets/breathing_animation.dart';
 
 class ForgotPasswordScreen extends HookConsumerWidget {
   const ForgotPasswordScreen({super.key});
@@ -52,7 +54,7 @@ class ForgotPasswordScreen extends HookConsumerWidget {
     }
 
     return Scaffold(
-      appBar: const AppBar(title: Text('نسيت كلمة المرور')),
+      appBar: AppBar(title: Text('نسيت كلمة المرور')),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(AppSpacing.xl),
@@ -557,7 +559,7 @@ class GoogleSignInCompletionScreen extends HookConsumerWidget {
     }
 
     return Scaffold(
-      appBar: const AppBar(title: Text('أكمل بياناتك')),
+      appBar: AppBar(title: Text('أكمل بياناتك')),
       body: SafeArea(
         child: ListView(
           padding: const EdgeInsets.all(AppSpacing.xl),

@@ -11,6 +11,7 @@ import 'package:shared/infrastructure/isar_service.dart';
 import 'package:shared/data/models/workout_model.dart';
 import '../../../auth/presentation/providers/auth_provider.dart';
 import '../../../workout/presentation/providers/workout_provider.dart';
+import 'package:isar/isar.dart';
 
 class ProgressScreen extends ConsumerWidget {
   const ProgressScreen({super.key});

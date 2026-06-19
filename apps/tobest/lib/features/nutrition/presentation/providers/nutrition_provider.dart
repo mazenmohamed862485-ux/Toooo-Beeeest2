@@ -11,6 +11,7 @@ import 'package:shared/utils/evaluator.dart';
 import 'package:uuid/uuid.dart';
 import '../../../auth/presentation/providers/auth_provider.dart';
 
+import 'package:isar/isar.dart';
 part 'nutrition_provider.g.dart';
 
 // ── Daily Summary Provider ─────────────────────────────────────

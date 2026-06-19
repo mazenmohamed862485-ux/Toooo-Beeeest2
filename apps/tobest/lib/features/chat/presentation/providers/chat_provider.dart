@@ -16,6 +16,7 @@ import 'package:shared/config/app_config.dart';
 import 'package:uuid/uuid.dart';
 import '../../../auth/presentation/providers/auth_provider.dart';
 
+import 'package:isar/isar.dart';
 part 'chat_provider.g.dart';
 
 // ── Messages Provider ─────────────────────────────────────────

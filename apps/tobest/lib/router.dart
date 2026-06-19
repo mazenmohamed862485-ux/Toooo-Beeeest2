@@ -31,7 +31,7 @@ import 'features/settings/presentation/screens/change_password_screen.dart';
 import 'features/home/presentation/screens/main_shell_screen.dart';
 
 /// بناء GoRouter مع ProviderRef للاستماع لحالة المصادقة
-GoRouter appRouter(Ref ref) {
+GoRouter appRouter(WidgetRef ref) {
   return GoRouter(
     initialLocation: AppRoutes.splash,
     debugLogDiagnostics: false,
@@ -337,5 +337,5 @@ class RouterNotifier extends ChangeNotifier {
     _ref.listen(authStateProvider, (_, __) => notifyListeners());
   }
 
-  final Ref _ref;
+  final WidgetRef _ref;
 }

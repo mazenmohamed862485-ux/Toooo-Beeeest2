@@ -17,6 +17,7 @@ import 'package:shared/data/models/chat_model.dart';
 import 'package:uuid/uuid.dart';
 import 'package:intl/intl.dart';
 import '../../../auth/presentation/providers/auth_provider.dart';
+import 'package:isar/isar.dart';
 
 /// شاشة AI Coach
 ///

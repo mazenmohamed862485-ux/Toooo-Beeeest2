@@ -89,7 +89,7 @@ class GoogleSignInCompletionScreen extends HookConsumerWidget {
     }
 
     return Scaffold(
-      appBar: const AppBar(title: Text('أكمل بياناتك')),
+      appBar: AppBar(title: Text('أكمل بياناتك')),
       body: SafeArea(
         child: Form(
           key: formKey,
@@ -337,7 +337,7 @@ class GuestScreen extends StatelessWidget {
     final accent = Theme.of(context).colorScheme.primary;
 
     return Scaffold(
-      appBar: const AppBar(title: Text('وضع الضيف')),
+      appBar: AppBar(title: Text('وضع الضيف')),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(AppSpacing.xxl),
@@ -346,16 +346,29 @@ class GuestScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               // Icon
-              Container(
+              Center(
+
+                child: Container(
+
                 width: 96,
+
                 height: 96,
+
                 decoration: BoxDecoration(
+
                   color: accent.withOpacity(0.1),
+
                   shape: BoxShape.circle,
+
                 ),
+
                 child: Icon(Icons.person_outline_rounded,
+
                     size: 52, color: accent),
-              ).also((w) => Center(child: w)),
+
+                ),
+
+              ),
 
               const SizedBox(height: AppSpacing.xl),
 
